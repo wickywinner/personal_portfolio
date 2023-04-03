@@ -15,5 +15,5 @@ def home_page(request):
         "skills": myskills,
         "know": skills
     }
-
+    print(context)
     return render(request, 'home_page.html', context)
