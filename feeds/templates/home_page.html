@@ -1,0 +1,307 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>W I C K Y &nbsp; W I N N E R</title>
+    <link rel="icon" href="{% static 'images/logo-icon.png' %}">
+    <link rel="icon" href="/Assets/img/15.jpg">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="https://allyoucan.cloud/cdn/icofont/1.0.1/icofont.css">
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <!-- links -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="preload" href="{% static 'images/fonts/Agustina.21f233e1.woff' %}" as="font" type="font/woff" crossorigin="">
+    <script src="https://use.fontawesome.com/66c3c19309.js"></script>
+    <script src="https://unpkg.com/ionicons@5.5.3/dist/ionicons.js"></script>
+    <!-- links -->
+     <!--ICONSCOUT CDN-->
+     <link rel ="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css"> <!--ICONSCOUT CDN-->
+     <link rel ="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
+</head>
+
+
+<body data-aos-easing="ease" data-aos-duration="1500" data-aos-delay="0">
+    <!-- <li><i class="uil uil-moon change-theme" id="theme-button"></i></li> -->
+    <button type="button" class="mobile-nav-toggle d-lg-none"><i class="icofont-navigation-menu"></i></button>
+    <header id="header" class="fixed-top ">
+        <div class="container-fluid  navbur">
+
+            <div class="navi">
+                <div class="col-xl-9 d-flex align-items-center lefty">
+                    <h1 class="logo mr-auto"><a href="#">Wicky Winner</a></h1>
+
+                    <nav class="nav-menu d-none d-lg-block float-right">
+                        <ul>
+                            <li class="active"><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#skills">Skills</a></li>
+                            <li><a href="#work">My Work</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                            <div class="invert pl-4 " id="theme-button">
+                                <ion-icon name='contrast-outline' style="color:rgb(17, 190, 221)"></ion-icon>
+                            </div>
+                          
+                        </ul>
+
+                    </nav>
+
+                    <div class="changed mx-3"><i class="icofont-ui-brightness change-theme" id="theme-button"></i></div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class=" descript "  id="home">
+        <div class="container ">
+
+            <div class="small-container ">
+                <div class="row">
+                    <div class="col-md-6 initial-0 aos-init " data-aos="zoom-in" data-aos-delay="200">
+                        <p style="color:rgb(145, 255, 0)" id="hey">HEY THERE !</p>
+                        {% for infor in info %}
+                        <h3 style="color:rgb(14, 213, 10)" id="name">I'M <span>{{infor.name_complete}}</span> </h3>
+                        <!-- <h4 style="color:rgb(145, 255, 0)" id="name">I'M <span>{{infor.mini_about}}</span> </h4> -->
+                        <!-- <h3 style="color:rgb(145, 255, 0)"> A Full Stack Web Developer</h3> -->
+                        <p style="color:rgb(131, 243, 216)"> <span id="big"></span>{{infor.mini_about}}</p>
+
+                        <div class="social">
+                            
+                            <a href="{{infor.instagram}}"> <i class="fa fa-instagram"></i></a>
+
+                            <a href="{{infor.linkedin}}"> <i class="fa fa-linkedin"  style="background: #0cb4f0 "></i></a>
+                            <a href="{{infor.facebook}}"><i class="fa fa-facebook-f" style="background: #4974c5 "></i>
+                           </a>
+                            <a href="{{infor.github}}"><i class="fa fa-github"></i>
+                            </a>
+                            <a href="{{infor.whatsapp}}" target="_blank"><i class="fa fa-whatsapp" style="background: #12de1c"></i></a>
+                        </div>
+                        <div class="button">
+                            <a href="mailto:{{infor.email}}"> <button class="main-button2">Contact me <i class="uil uil-message"style="" ></i>  </button></a>
+                            <a class="main-button ml-2" href="{{infor.mycv}}" target="_blank" rel="noopener noreferrer"> <button id="btn2">My Resume <i class="uil uil-import"></i></i>
+                            </button></a>
+
+                        </div>
+
+                    </div>
+                    <div class="col-md-6 initial-1 aos-init" data-aos="zoom-in" data-aos-delay="300">
+                        <img src="{{infor.avatar}}" alt="">
+                    </div>
+                    {% endfor %}
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="about its-me " id="about">
+        <div class="container2">
+
+            <div class="small-container2 ">
+                <div class="row2 initial-3">
+                    {% for aboutme in about %}
+                    <div class="col-md-6 aos-init" data-aos="fade-up-right" data-aos-delay="700">
+                        <img src="{{aboutme.about_avatar}}" alt="">
+                    </div>
+                    <div class="col-md-6 initial-4">
+                        <div class="title aos-init" data-aos="zoom-in" data-aos-delay="200">
+                            <h1 style="color:rgb(5, 248, 46)">{{aboutme.title}}</h1>
+                        </div>
+                        <p style="color:rgb(145, 255, 0)" data-aos="zoom-in" data-aos-delay="200" class="aos-init"><span id="big"></span>{{aboutme.description1}}</p>
+                        <p style="color:rgb(145, 255, 0)" data-aos="zoom-in" data-aos-delay="200" class="aos-init"> <span id="big"></span>{{aboutme.description2}}</p>
+                        <div class="icons aos-init" data-aos="zoom-in" data-aos-delay="300">
+                            <div>
+                                <ion-icon name="logo-python" style="color: #dfcf19;font-size:35px"></ion-icon>
+                                <p style="color: rgb(204, 198, 20)" >Python</p>
+                            </div>
+                            <div> <i class="fa fa-database" style="color: #11da18;font-size:35px"></i>
+                                <p style="color: rgb(204, 198, 20)" >Postgres</p>
+                            </div>
+                            <div>
+                                <ion-icon src="/static/images/djangoproject.svg" style="color: rgb(2, 40, 40);font-size:35px"></ion-icon></ion-icon>
+                                <p style="color: rgb(204, 198, 20)" >Django</p>
+                            </div>
+                            <div>
+                                <ion-icon src="/static/images/flask.svg" style="color: rgb(111, 223, 20);font-size:35px"></ion-icon></ion-icon>
+                                <p style="color: rgb(204, 198, 20)">flask</p>
+                            </div>
+                            <div>
+                                <ion-icon src="/static/images/api-svgrepo-com (2).svg" style="color: rgb(7, 223, 54);font-size:35px"></ion-icon></ion-icon>
+                                <p  style="color: rgb(204, 198, 20)">REST</p>
+                            </div>
+                            <div>
+                                <ion-icon src="/static/images/icons8-graphql.svg" style="color: rgb(25, 40, 2);font-size:35px"></ion-icon></ion-icon>
+                                <p style="color: rgb(204, 198, 20)"> GraphQL</p>
+                            </div>
+                
+                        </div>
+
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        
+
+        </article>
+
+        <article>
+            <div class="container skills" id="know">
+
+                <div class="small-container">
+                    <div class="row9">
+                        <div class="col-md-10 initial-5">
+                            <div class="title">
+                                <h1 class="" style="color:rgb(34, 197, 9)" {text-align: center;} >SKILLS</h1>
+                            </div>
+                            <div class="all-bars">
+                                <div class="bars aos-init" data-aos="zoom-in" data-aos-delay="800">
+                                    {% for skill in know %}
+                                    <div class="bar-info">
+                                        <p style="color:rgb(163, 231, 73)">{{skill.skill}}</p>
+                                        <p style="color:rgb(113, 216, 232)">{{skill.num}} %</p>
+                                    </div>
+                                    <div class="bar">
+                                    <p id="{{skill.color}}"></p>
+                                    <br>
+                                    <br>
+
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </article>
+    </section>
+
+
+
+    <div class="work">
+        <div class="container" id="work">
+            <div class="title2">
+                <h1 style="color:rgb(34, 197, 9)">MY WORK</h1>
+            </div>
+            <div class="small-container">
+                <div class="row3">
+                    {% for sys in skills %}
+                    <div class="card initial-6  w- aos-init" data-aos="zoom-in" data-aos-delay="500">
+
+                        <img src="{{sys.image}}" alt="">
+
+
+                        <div class="card-body col-5-info px-3 py-3">
+                            <h3 class="pb-1">{{sys.title}}</h3>
+                            <p class="pb-1">{{sys.skill}}</p>
+                            <button><a href="{{sys.link}}"  style="color:rgb(34, 197, 9)">VISIT</a></button>
+                            <button><a href="{{sys.demoLink}}"  style="color:rgb(38, 96, 231)">DEMO</a></button>
+
+                        </div>
+
+                    </div>
+                    {% endfor %}
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <footer id="contact">
+        <div class="container">
+            <div class="title5">
+                <h1 style="color:rgb(34, 197, 9)" >CONTACT ME</h1>
+            </div>
+            <div class="small-container">
+                <div class="row4">
+                                         {% for infor in info %}
+   
+                    <div class="col-md-6 initial-8 aos-init" data-aos="fade-down-right" data-aos-delay="300">
+                        <p style="color:rgb(229, 248, 13)" id="helo">Wanna talk about a project or just saying hi <img src="{%  static 'images/e.png' %}" alt="" id="e" class="wave"></p>
+
+                        <div class="contact-info">
+                            <div class="c-ico">
+                    <i class="fa fa-comments" style="color:rgb(40, 224, 11)" ></i> <span id="io" style="color:rgb(236, 242, 47)">Say Hello</span></i>
+                                
+                            </div>
+                            <p style="color:rgb(236, 242, 47)">Email: <span>{{infor.email}}</span></p>
+                            <p style="color:rgb(236, 242, 47)">Phone: <span>{{infor.phone}}</span></p>
+                        </div>
+                        <div class="contact-info">
+                            <div class="c-ico">
+                                <i class="fa fa-map-marker" style="color:rgb(40, 224, 11)"></i><span id="io" style="color:rgb(236, 242, 47)">Find me in</span>
+                            </div>
+                            <p style="color:rgb(236, 242, 47)"><span>{{infor.address}}</span></p>
+
+                        </div>
+                        <div class="contact-info obojo">
+                            <div class="c-ico">
+                                <i class="fa fa-share-square-o" style="color:rgb(40, 224, 11)"> <span id="io" style="color:rgb(236, 242, 47)">Social networks</span> </i>
+                            </div>
+                            <h4>
+                                <a href="{{infor.instagram}}" class="m1"> <i class="fa fa-instagram"></i></a>
+
+                                  <a href="{{infor.linkedin}}" class="m1"> <i class="fa fa-linkedin" style="background: #0cb4f0 "></i></a>
+                                <a href="{{infor.github}}"><i class="fa fa-github"></i></a>
+                                <a href="{{infor.facebook}}"><i class="fa fa-facebook" style="background: #4974c5"></i></a>
+                                <a href="{{infor.whatsapp}}" target="_blank"><i class="fa fa-whatsapp" style="background: #12de1c"></i></a>
+                            </h4>
+
+                        </div>
+                    </div>
+                    <div class=" col-md-6 initial-7 aos-init " data-aos="zoom-in " data-aos-delay="700 ">
+                        <img src="{% static 'images/19.svg' %} " alt=" ">
+                    </div>
+                 {% endfor %}
+                </div>
+                <div class="footing ">
+                    <div class="row justify-content-center ">
+                        <div class="col-md-4 ">
+                            <p style="color:rgb(40, 224, 11)">Designed By </p>
+                            <p style="color:rgb(40, 224, 11)">Wicky Winner</p>
+                            <p style="color:rgb(40, 224, 11)">A Software Developer</p>
+                            <p  style="color:rgb(40, 224, 11)"id="copy ">© COPYRIGHTS 2023. ALL RIGHTS RESERVED.
+                        </div>
+                    </div>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="up-arrow ">
+            <div class="arrow ">
+                <a href="# "><i class="fa fa-angle-up "></i>
+            </a>
+            </div>
+        </div>
+
+    </footer>
+
+    <div id="preloader"></div>
+    <script src="{% static 'jquery/jquery.min.js' %}"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'jquery.easing/jquery.easing.min.js' %}"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+</body>
+
+</html>
