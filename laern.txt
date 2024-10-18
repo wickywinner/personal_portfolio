@@ -18,6 +18,9 @@ How to use
 4.1) >> git push branch-name
 4.2) if you present on same branch then use only >> git push
 
+5) pull your repo changes in local
+5.1)>> git pull branch-name 
+5.2)>>       
 
 ** Setup config in git
 >> git config --global user.email "you@example.com"
