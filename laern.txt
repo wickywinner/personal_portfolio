@@ -20,7 +20,9 @@ How to use
 
 5) pull your repo changes in local
 5.1)>> git pull branch-name 
-5.2)>>       
+
+6) How to create Merge request (PR)
+    6.1) go to brach repo and create PR from source to target brach using merge request tab
 
 ** Setup config in git
 >> git config --global user.email "you@example.com"
