@@ -1,0 +1,9 @@
+How to use 
+
+1.) setup repo in local 
+    1.1) take a clone >> git clone "repo url"
+    1.1) how to check branch >> git branch, git status
+    
+2.) create your own branch 
+    2.1) git checkout -b "branch-name"
+    
