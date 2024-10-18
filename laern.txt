@@ -1,0 +1,30 @@
+How to use 
+
+How to use
+
+1.) setup repo in local
+1.1) take a clone >> git clone "repo url"
+1.1) how to check branch >> git branch, git status
+
+2.) create your own branch
+2.1) >> git checkout -b "branch-name"
+
+3.) How to add file in git after development in your branch
+3.1)for adding all new/untacked files at a time >> git add .
+3.2)for adding all files at a time >> git add file-name
+3.3)Do commit >> git commit -m "added text file"
+
+4.) Push your changes to repo
+4.1) >> git push branch-name
+4.2) if you present on same branch then use only >> git push
+
+5) pull your repo changes in local
+5.1)>> git pull branch-name 
+
+6) How to create Merge request (PR)
+    6.1) go to brach repo and create PR from source to target brach using merge request tab
+
+** Setup config in git
+>> git config --global user.email "you@example.com"
+>> git config --global user.name "Your Name"
+    
